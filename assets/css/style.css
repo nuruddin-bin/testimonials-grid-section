@@ -33,3 +33,17 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.main{
+    background-color: var(--Light-grayish-blue);
+    width: min(90rem, 100%);
+    min-height: 56.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards-container{
+    background-color: transparent;
+    width: calc(70rem, 90%);
+}
