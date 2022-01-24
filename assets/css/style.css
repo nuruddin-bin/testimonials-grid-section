@@ -26,7 +26,7 @@
 }
 
 body{
-    background-color: lightcyan;
+    background-color: transparent;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -45,14 +45,23 @@ body{
 
 .cards-container{
     background-color: transparent;
-    width: calc(70rem, 90%);
+    width: 90%;
+    padding: 5rem 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    grid-template-areas: 
+    "a a b e"
+    "c d d e";
 }
 
 /* all card */
 .card{
-    background-color: var(--Moderate-violet);
+    background-color: #fff;
     padding: 1.5rem 2rem;
     position: relative;
+    border-radius: .5rem;
 }
 
 .card_img{
@@ -83,9 +92,73 @@ body{
 }
 
 .card_bio{
-
+    font-size: 1.5rem;
+    font-weight: var(--fw-semi-bold);
+    color: var(--Light-grayish-blue);
+    margin-top: 1rem;
 }
 
 .card_sub-bio{
+    font-size: 13px;
+    font-weight: var(--fw-medium);
+    color: var(--Light-grayish-blue);
+    opacity: .7;
+    margin-top: 1rem;
+}
 
+/* separate card */
+.card-1{
+    background-color: var(--Moderate-violet);
+    grid-area: a;
+    background-image: url(../img/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: top right 17%;
+}
+.card-2{
+    background-color: var(--Very-dark-grayish-blue);
+    grid-area: b;
+}
+.card-3{
+    background-color: var(--White);
+    grid-area: c;
+}
+.card-4{
+    background-color: var(--Very-dark-blackish-blue);
+    grid-area: d;
+}
+.card-5{
+    background-color: var(--White);
+    grid-area: e;
+}
+
+.card-3 .card_name, .card-5 .card_name{
+    color: var(--Very-dark-grayish-blue);
+}
+.card-3 .card_title, .card-5 .card_title{
+    color: var(--Very-dark-grayish-blue);
+}
+.card-3 .card_bio, .card-5 .card_bio{
+    color: var(--Very-dark-grayish-blue);
+}
+.card-3 .card_sub-bio, .card-5 .card_sub-bio{
+    color: var(--Very-dark-grayish-blue);
+}
+
+
+
+/*---------- responsive -----------*/
+
+@media(max-width: 853px){
+    /* card container */
+    .cards-container{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, max-content);
+        grid-template-areas: 
+        "a"
+        "b"
+        "c"
+        "d"
+        "e";
+        align-items: start;
+    }
 }
