@@ -26,7 +26,7 @@
 }
 
 body{
-    background-color: transparent;
+    background-color: lightcyan;
     width: 100%;
     min-height: 100vh;
     display: flex;
@@ -46,4 +46,46 @@ body{
 .cards-container{
     background-color: transparent;
     width: calc(70rem, 90%);
+}
+
+/* all card */
+.card{
+    background-color: var(--Moderate-violet);
+    padding: 1.5rem 2rem;
+    position: relative;
+}
+
+.card_img{
+    width: 2.5rem;
+    display: inline-block;
+    border-radius: 50%;
+}
+
+.card_name{
+    font-size: 13px;
+    font-weight: var(--fw-medium);
+    color: var(--Light-grayish-blue);
+    display: inline-block;
+    position: absolute;
+    top: 1.5rem;
+    left: 5.5rem;
+}
+
+.card_title{
+    font-size: 13px;
+    font-weight: var(--fw-medium);
+    color: var(--Light-grayish-blue);
+    opacity: .5;
+    display: inline-block;
+    position: absolute;
+    top: 2.5rem;
+    left: 5.5rem;
+}
+
+.card_bio{
+
+}
+
+.card_sub-bio{
+
 }
